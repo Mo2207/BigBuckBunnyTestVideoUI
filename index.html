@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,500&display=swap" rel="stylesheet">
+
+    <title>Javans Project</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <header style="font-size:1vw">
+            <h1>My Video UI</h1>
+        </header>
+
+        <div class="search-bar">
+            
+            <input id="searchbar" type="text" placeholder="Search..">
+
+            <!-- <button id="searchbtn" class="fas fa-search" onclick="execute()"></button> -->
+            
+            
+        </div>
+
+        <div class="overlay">
+            <!-- Big Buck Bunny video element -->
+            <video id="video" onmousemove="toggleControls()" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+
+            <!-- youtube API video element -->
+            <!-- <video id="video" src="https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBBlOmgWKEZ-by7YZSLDXUf0O5PBENEVNU"></video> -->
+
+
+        
+            <div id="controls">
+
+                <div class="upperBox">
+                    <input type="range" min="0" max="100" value="0" id="videoSlider" class="slider">
+                </div>
+
+                <div class="box1">
+                    <div id="volumeIcon">
+                        <img id="muteBtn" class="Btn" src="images/volume_down_white_24dp.svg" alt="mute icon">
+                    </div>
+
+                    <input type="range" min="0" max="100" value="50" id="volumeRange" class="slider">
+                    <p><span id="output"></span></p>
+                    
+                </div>
+
+                <div class="box2">
+                    <img id="rewind" class="Btn" src="images/fast_rewind_white_24dp.svg" alt="rewind icon">
+                    <img id="playBtn" class="Btn" src="images/play_arrow_white_24dp.svg" alt="play icon">
+                    <img id="forward" class="Btn" src="images/fast_forward_white_24dp.svg" alt="fast forward icon">
+                </div>
+
+                <div class="box3">
+                    
+                    <div id="duration">0:00</div>
+
+                    <div id="fullscreenIcon">
+                        <img src="images/fullscreen_white_24dp.svg" class="Btn" alt="screen icon">
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="info">
+            <div class="title">
+                Big Buck Bunny
+            </div>
+            <div class="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae veritatis praesentium cupiditate harum tempora, veniam vitae nihil? Eligendi aut delectus quo inventore! Assumenda minus ratione culpa quidem. Ipsum laudantium possimus suscipit accusamus quas, magnam eum ab recusandae ea assumenda dolores aliquam ipsam vel explicabo non. Consectetur minus nobis sapiente asperiores?
+            </div>
+            <div class="channel">
+                channel name here...
+            </div>
+        </div>
+
+    </div>
+
+    <!-- api -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <!-- js code -->
+    <script src="app.js"></script>
+
+    <!-- youtube API code -->
+    <script src="youtubeAPI.js"></script>
+
+</body>
+</html>
